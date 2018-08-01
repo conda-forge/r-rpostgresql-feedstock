@@ -14,14 +14,16 @@ Summary: Database interface and 'PostgreSQL' driver for 'R'. This package provid
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-rpostgresql-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-rpostgresql-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-rpostgresql-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-rpostgresql-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-rpostgresql-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-rpostgresql-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-rpostgresql-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-rpostgresql-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-rpostgresql/badges/version.svg)](https://anaconda.org/conda-forge/r-rpostgresql)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-rpostgresql/badges/downloads.svg)](https://anaconda.org/conda-forge/r-rpostgresql)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--rpostgresql-green.svg)](https://anaconda.org/conda-forge/r-rpostgresql) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-rpostgresql.svg)](https://anaconda.org/conda-forge/r-rpostgresql) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-rpostgresql.svg)](https://anaconda.org/conda-forge/r-rpostgresql) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-rpostgresql.svg)](https://anaconda.org/conda-forge/r-rpostgresql) |
 
 Installing r-rpostgresql
 ========================
