@@ -17,7 +17,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -52,7 +52,7 @@ about:
   home: https://github.com/tomoakin/RPostgreSQL, https://cran.r-project.org/package=DBI, http://www.postgresql.org
   license_family: GPL2
   license: GPL-2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses/GPL-2'      # [win]
   summary: Database interface and 'PostgreSQL' driver for 'R'. This package provides a Database
     Interface 'DBI' compliant  driver for 'R' to access 'PostgreSQL' database systems.   In
