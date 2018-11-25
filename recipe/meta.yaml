@@ -17,6 +17,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  merge_build_host: True  # [win]
   number: 1000
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -27,17 +28,16 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}
+  host:
     - r-base
     - r-dbi >=0.3
-    - toolchain
-    - posix                # [win]
-    - gcc                  # [not win]
     - postgresql
 
   run:
     - r-base
     - r-dbi >=0.3
-    - libgcc               # [not win]
     - libpq
 
 test:
