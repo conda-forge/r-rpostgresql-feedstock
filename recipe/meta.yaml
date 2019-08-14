@@ -1,51 +1,52 @@
 {% set version = '0.6-2' %}
-{% set sha256 = '080118647208bfa2621bcaac0d324891cc513e07618fa22e3c50ec2050e1b0d5' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
-{% set name = 'r-rpostgresql' %}
 
 package:
-  name: {{ name }}
+  name: r-rpostgresql
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: RPostgreSQL_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/RPostgreSQL_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/RPostgreSQL/RPostgreSQL_{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+    - {{ cran_mirror }}/src/contrib/RPostgreSQL_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/RPostgreSQL/RPostgreSQL_{{ version }}.tar.gz
+  sha256: 080118647208bfa2621bcaac0d324891cc513e07618fa22e3c50ec2050e1b0d5
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
-  # This is required to make R link correctly on Linux.
+  number: 1002
   rpaths:
     - lib/R/lib/
     - lib/
-  skip: True              # [win]
-
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}sed               # [win]
+    - {{posix}}grep              # [win]
+    - {{posix}}autoconf
+    - {{posix}}automake          # [not win]
+    - {{posix}}automake-wrapper  # [win]
+    - {{posix}}pkg-config
+    - {{posix}}make
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-dbi >=0.3
-    - postgresql
-
+    - libpq                      # [linux]
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
     - r-dbi >=0.3
     - libpq
 
 test:
   commands:
-    - $R -e "library('RPostgreSQL')"  # [not win]
+    - $R -e "library('RPostgreSQL')"           # [not win]
     - "\"%R%\" -e \"library('RPostgreSQL')\""  # [win]
-    - conda inspect linkages {{ name }}  # [linux]
-    - conda inspect objects {{ name }}  # [osx]
 
 about:
   home: https://github.com/tomoakin/RPostgreSQL, https://cran.r-project.org/package=DBI, http://www.postgresql.org
