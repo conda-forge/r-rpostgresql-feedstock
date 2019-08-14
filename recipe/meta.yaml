@@ -36,6 +36,7 @@ requirements:
   host:
     - r-base
     - r-dbi >=0.3
+    - libpq                      # [linux]
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
