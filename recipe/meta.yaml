@@ -45,8 +45,6 @@ test:
   commands:
     - $R -e "library('RPostgreSQL')"           # [not win]
     - "\"%R%\" -e \"library('RPostgreSQL')\""  # [win]
-    - conda inspect linkages {{ name }}  # [linux]
-    - conda inspect objects {{ name }}  # [osx]
 
 about:
   home: https://github.com/tomoakin/RPostgreSQL, https://cran.r-project.org/package=DBI, http://www.postgresql.org
