@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1003
+  number: 1004
   rpaths:
     - lib/R/lib/
     - lib/
@@ -63,6 +63,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - conda-forge/r
     - mariusvniekerk
     - johanneskoester
