@@ -3,7 +3,7 @@ About r-rpostgresql
 
 Home: https://github.com/tomoakin/RPostgreSQL, https://cran.r-project.org/package=DBI, http://www.postgresql.org
 
-Package license: GPL-2
+Package license: GPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rpostgresql-feedstock/blob/main/LICENSE.txt)
 
