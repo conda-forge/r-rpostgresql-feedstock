@@ -3,6 +3,7 @@ About r-rpostgresql-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rpostgresql-feedstock/blob/main/LICENSE.txt)
 
+
 About r-rpostgresql
 -------------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/tomoakin/RPostgreSQL, https://cran.r-project.org/packag
 Package license: GPL-3.0-only
 
 Summary: Database interface and 'PostgreSQL' driver for 'R'. This package provides a Database Interface 'DBI' compliant  driver for 'R' to access 'PostgreSQL' database systems.   In order to build and install this package from source, 'PostgreSQL'  itself must be present your system to provide 'PostgreSQL' functionality  via its libraries and header files. These files are provided as 'postgresql-devel' package under some Linux distributions. On 'macOS' and 'Microsoft Windows' system the attached 'libpq' library source will be used.
+
 About r-rpostgresql
 -------------------
 
