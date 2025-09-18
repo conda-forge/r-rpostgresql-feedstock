@@ -45,7 +45,6 @@ requirements:
   run:
     - r-base
     - r-dbi >=0.3
-    - libpq
 
 test:
   commands:
